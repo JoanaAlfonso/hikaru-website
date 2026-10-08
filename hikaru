@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hikaru Solis | Virtual Assistant & Digital Marketing Specialist</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Plus Jakarta Sans',sans-serif;background-color:#fff0f5;color:#4a0e17;overflow-x:hidden}
+.glass-card{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(244,114,182,.25)}
+.glass-card-hover{transition:all .3s cubic-bezier(.4,0,.2,1)}
+.glass-card-hover:hover{transform:translateY(-6px);box-shadow:0 20px 35px -10px rgba(244,63,94,.2);border-color:rgba(244,114,182,.5)}
+.pink-gradient-bg{background:linear-gradient(135deg,#fb7185 0%,#e11d48 100%)}
+.pink-gradient-text{background:linear-gradient(135deg,#e11d48 0%,#9f1239 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:#ffe4e6}
+::-webkit-scrollbar-thumb{background:#fb7185;border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:#e11d48}
+.thumb-scroll::-webkit-scrollbar{height:5px}
+.thumb-scroll::-webkit-scrollbar-track{background:#fce4ec;border-radius:4px}
+.thumb-scroll::-webkit-scrollbar-thumb{background:#f48fb1;border-radius:4px}
+.line-clamp-1{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1}
+.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.line-clamp-3{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.animate-marquee{display:flex;width:max-content;animation:marquee 28s linear infinite}
+.marquee-container:hover .animate-marquee{animation-play-state:paused}
+</style>
+</head>
+<body class="bg-rose-50/50 text-pink-950 min-h-screen selection:bg-pink-300 selection:text-pink-900 antialiased">
+
+<!-- ===== HEADER ===== -->
+<header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 border-b border-pink-100/80 shadow-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="#" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl pink-gradient-bg flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">S</div>
+        <div>
+          <span class="font-extrabold text-base sm:text-lg text-pink-950 tracking-tight block leading-tight">Hikaru Solis</span>
+          <span class="text-[10px] font-semibold tracking-wider text-pink-600 uppercase block">Virtual Assistant | Marketing Specialist</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-bold text-pink-900/80">
+        <a href="#about" class="hover:text-pink-600 transition-colors">About</a>
+        <a href="#services" class="hover:text-pink-600 transition-colors">Services</a>
+        <a href="#portfolio" class="hover:text-pink-600 transition-colors">Portfolio</a>
+        <a href="#experience" class="hover:text-pink-600 transition-colors">Experience</a>
+        <a href="#contact" class="hover:text-pink-600 transition-colors">Contact</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3 shrink-0">
+        <a href="mailto:hikarusolis@gmail.com" class="px-4 py-2.5 rounded-full border border-pink-300 text-pink-800 text-xs font-bold hover:bg-pink-100/60 transition-all flex items-center gap-2">
+          <i class="fa-regular fa-envelope text-pink-600"></i> hikarusolis@gmail.com
+        </a>
+        <a href="#contact" class="px-5 py-2.5 rounded-full pink-gradient-bg text-white text-xs font-bold shadow-md hover:opacity-90 transition-all">Hire Me</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-pink-900 hover:bg-pink-100 transition-colors">
+        <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-b border-pink-200 bg-white/95 px-6 pt-4 pb-6 space-y-4">
+    <a href="#about"      class="mobile-nav block text-sm font-bold text-pink-900 hover:text-pink-600 py-1">About</a>
+    <a href="#services"   class="mobile-nav block text-sm font-bold text-pink-900 hover:text-pink-600 py-1">Services</a>
+    <a href="#portfolio"  class="mobile-nav block text-sm font-bold text-pink-900 hover:text-pink-600 py-1">Portfolio</a>
+    <a href="#experience" class="mobile-nav block text-sm font-bold text-pink-900 hover:text-pink-600 py-1">Experience</a>
+    <a href="#contact"    class="mobile-nav block text-sm font-bold text-pink-900 hover:text-pink-600 py-1">Contact</a>
+    <div class="pt-4 border-t border-pink-100 flex flex-col gap-3">
+      <a href="mailto:hikarusolis@gmail.com" class="w-full py-3 rounded-xl border border-pink-300 text-pink-800 text-xs font-bold text-center flex items-center justify-center gap-2">
+        <i class="fa-regular fa-envelope text-pink-600"></i> hikarusolis@gmail.com
+      </a>
+      <a href="#contact" class="mobile-nav w-full py-3 rounded-xl pink-gradient-bg text-white text-xs font-bold text-center shadow-md">Hire Me</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="relative py-12 sm:py-16 lg:py-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100/80 border border-pink-300 text-pink-800 text-xs font-bold">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>FOR BUSY BUSINESS OWNERS
+        </div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-pink-950 leading-tight">
+          High-Converting Digital Marketing & Executive <span class="pink-gradient-text">Virtual Support</span>
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg text-pink-900/80 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          Hi, I'm <strong class="text-pink-950">Hikaru Solis</strong> — a BS Marketing Management graduate delivering strategic social media management, targeted copywriting, email marketing campaigns, and streamlined executive administrative assistance.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 sm:gap-4 pt-2">
+          <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-full pink-gradient-bg text-white font-bold text-sm shadow-lg hover:scale-105 transition-all text-center flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-phone text-xs"></i> Book Your Discovery Call
+          </a>
+          <a href="#portfolio" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white border border-pink-300 text-pink-900 font-bold text-sm hover:bg-pink-50 shadow-sm transition-all text-center">
+            View Work Examples <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+          </a>
+        </div>
+        <div class="pt-8 border-t border-pink-200/60 grid grid-cols-3 gap-2 sm:gap-4 max-w-lg mx-auto lg:mx-0">
+          <div class="text-center lg:text-left">
+            <p class="text-2xl sm:text-3xl font-extrabold text-pink-600">1+ Year</p>
+            <p class="text-[11px] sm:text-xs text-pink-800/80 font-medium">Industry Experience</p>
+          </div>
+          <div class="text-center lg:text-left">
+            <p class="text-2xl sm:text-3xl font-extrabold text-pink-600">BSBA MM</p>
+            <p class="text-[11px] sm:text-xs text-pink-800/80 font-medium">Degree Holder</p>
+          </div>
+          <div class="text-center lg:text-left">
+            <p class="text-2xl sm:text-3xl font-extrabold text-pink-600">99.8%</p>
+            <p class="text-[11px] sm:text-xs text-pink-800/80 font-medium">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+        <div class="w-full max-w-md mx-auto relative">
+          <div class="absolute -top-6 -left-6 w-32 h-32 bg-pink-300/40 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-rose-400/30 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="glass-card rounded-3xl p-5 sm:p-6 shadow-xl border border-pink-200">
+            <!-- ✏️ Replace with your actual profile photo URL -->
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Hikaru Solis" class="w-full h-72 sm:h-80 object-cover rounded-2xl shadow-md mb-5">
+            <div class="flex items-center justify-between p-4 bg-white/90 rounded-2xl border border-pink-100 shadow-sm">
+              <div>
+                <h4 class="font-bold text-sm text-pink-950">Hikaru Solis, BS MM</h4>
+                <p class="text-xs text-pink-600 font-semibold">Virtual Assistant & Marketer</p>
+              </div>
+              <div class="flex gap-2">
+                <span class="w-8 h-8 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center text-xs"><i class="fa-brands fa-linkedin-in"></i></span>
+                <span class="w-8 h-8 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center text-xs"><i class="fa-regular fa-envelope"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAIN POINTS ===== -->
+<section class="py-16 sm:py-20 bg-white/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-3">
+      <span class="text-xs font-bold text-pink-600 tracking-widest uppercase bg-pink-100 px-3.5 py-1.5 rounded-full border border-pink-200 inline-block"><i class="fa-solid fa-triangle-exclamation mr-1.5"></i> Sound Familiar?</span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-pink-950 leading-tight">Are These Daily Struggles Slowing Down Your Business Growth?</h2>
+      <p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed">Running a business shouldn't feel like constantly putting out fires. Here is how we turn your everyday operational chaos into clear, high-converting growth.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between">
+        <div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-hourglass-half"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-pink-600 bg-pink-50 px-2.5 py-1 rounded-md border border-pink-100 mb-2 inline-block">The Problem</span><h4 class="font-bold text-base text-pink-950 mb-1.5">Drained by Constant Content Creation?</h4><p class="text-xs text-pink-900/80 leading-relaxed mb-3">Spending endless hours brainstorming captions, designing graphics, and editing reels instead of focusing on revenue strategy.</p></div>
+        <div class="pt-3 border-t border-pink-100"><p class="text-[11px] font-bold text-pink-950 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-pink-600"></i> My Strategic Solution:</p><p class="text-xs font-medium text-pink-900/90 leading-normal">Done-for-you monthly content calendars, custom Canva graphics, and short-form video edits that keep your brand consistent.</p></div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between">
+        <div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-inbox"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-pink-600 bg-pink-50 px-2.5 py-1 rounded-md border border-pink-100 mb-2 inline-block">The Problem</span><h4 class="font-bold text-base text-pink-950 mb-1.5">Buried in Messy Admin & Inboxes?</h4><p class="text-xs text-pink-900/80 leading-relaxed mb-3">Unread emails accumulating, double-booked meetings, missed client follow-ups pulling you away from core tasks.</p></div>
+        <div class="pt-3 border-t border-pink-100"><p class="text-[11px] font-bold text-pink-950 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-pink-600"></i> My Strategic Solution:</p><p class="text-xs font-medium text-pink-900/90 leading-normal">Executive-level calendar coordination, Inbox Zero management, and structured SOP systems to streamline daily operations.</p></div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between">
+        <div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-arrow-trend-down"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-pink-600 bg-pink-50 px-2.5 py-1 rounded-md border border-pink-100 mb-2 inline-block">The Problem</span><h4 class="font-bold text-base text-pink-950 mb-1.5">Struggling to Turn Views into Sales?</h4><p class="text-xs text-pink-900/80 leading-relaxed mb-3">Getting engagement but lacking structured email lead magnets or copy that converts visitors into paying clients.</p></div>
+        <div class="pt-3 border-t border-pink-100"><p class="text-[11px] font-bold text-pink-950 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-pink-600"></i> My Strategic Solution:</p><p class="text-xs font-medium text-pink-900/90 leading-normal">Data-backed lead generation sourcing, persuasive sales copy, and polished client presentation decks.</p></div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between">
+        <div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-folder-open"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-pink-600 bg-pink-50 px-2.5 py-1 rounded-md border border-pink-100 mb-2 inline-block">The Problem</span><h4 class="font-bold text-base text-pink-950 mb-1.5">Lacking Organized Systems & Data?</h4><p class="text-xs text-pink-900/80 leading-relaxed mb-3">Scattered spreadsheets, outdated CRM records, and wasting hours searching for market research or prospect contacts.</p></div>
+        <div class="pt-3 border-t border-pink-100"><p class="text-[11px] font-bold text-pink-950 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-pink-600"></i> My Strategic Solution:</p><p class="text-xs font-medium text-pink-900/90 leading-normal">Meticulous data entry, spreadsheet cleanup, CRM organization, and targeted lead prospecting lists ready for outreach.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+      <h2 class="text-xs font-extrabold text-pink-600 uppercase tracking-widest mb-2">Tailored Solutions</h2>
+      <h3 class="text-2xl sm:text-4xl font-extrabold text-pink-950 tracking-tight">High-Impact Services Provided</h3>
+      <p class="text-sm sm:text-base text-pink-900/80 mt-4 leading-relaxed">From managing multi-channel social presence to handling daily executive routines, here is how I help businesses flourish.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between"><div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-bullhorn"></i></div><h4 class="font-bold text-base sm:text-lg text-pink-950 mb-1.5">Social Media Management</h4><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed mb-3">Content calendar scheduling, visual post design (Canva), reel editing, and audience engagement across Instagram, TikTok, LinkedIn, and Facebook.</p></div><ul class="text-xs font-semibold text-pink-800 space-y-1.5 pt-3 border-t border-pink-100"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Monthly Content Planning</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Custom Canva Graphics</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Reels & Video Editing</li></ul></div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between"><div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-pen-nib"></i></div><h4 class="font-bold text-base sm:text-lg text-pink-950 mb-1.5">Graphic Design</h4><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed mb-3">Creating eye-catching visual content, marketing materials, and brand assets designed to make a lasting impression.</p></div><ul class="text-xs font-semibold text-pink-800 space-y-1.5 pt-3 border-t border-pink-100"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Marketing Materials</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Promotional Graphics & Ads</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Pitch Decks & Presentations</li></ul></div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between"><div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-list-check"></i></div><h4 class="font-bold text-base sm:text-lg text-pink-950 mb-1.5">Executive Admin Support</h4><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed mb-3">Inbox zero maintenance, calendar management, travel bookings, document creation, and Notion/Trello setups.</p></div><ul class="text-xs font-semibold text-pink-800 space-y-1.5 pt-3 border-t border-pink-100"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Calendar & Meeting Coordination</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> CRM & Workspace Organization</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> SOP Documentation</li></ul></div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between"><div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-video"></i></div><h4 class="font-bold text-base sm:text-lg text-pink-950 mb-1.5">Basic Video Editing</h4><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed mb-3">Creating simple, engaging video content for social media and marketing purposes.</p></div><ul class="text-xs font-semibold text-pink-800 space-y-1.5 pt-3 border-t border-pink-100"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Reels & Short-form Videos</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Captions & Text Overlays</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Basic Cuts & Transitions</li></ul></div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between"><div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-headset"></i></div><h4 class="font-bold text-base sm:text-lg text-pink-950 mb-1.5">Customer Support</h4><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed mb-3">Providing reliable support and keeping customer communication smooth and professional.</p></div><ul class="text-xs font-semibold text-pink-800 space-y-1.5 pt-3 border-t border-pink-100"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Email & Chat Support</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Customer Inquiries & Follow-ups</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Issue Tracking & Resolution</li></ul></div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between"><div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-database"></i></div><h4 class="font-bold text-base sm:text-lg text-pink-950 mb-1.5">Data Entry & Research</h4><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed mb-3">Handling data accurately while keeping information organized and easy to access.</p></div><ul class="text-xs font-semibold text-pink-800 space-y-1.5 pt-3 border-t border-pink-100"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Data Entry & Cleanup</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Web Research & Spreadsheets</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Database Updates</li></ul></div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 bg-white/80 flex flex-col justify-between"><div><div class="w-11 h-11 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-user-plus"></i></div><h4 class="font-bold text-base sm:text-lg text-pink-950 mb-1.5">Lead Generation & Sourcing</h4><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed mb-3">Finding and organizing potential leads that match your target market.</p></div><ul class="text-xs font-semibold text-pink-800 space-y-1.5 pt-3 border-t border-pink-100"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Lead Research & Prospecting</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Contact List Building</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 flex-shrink-0"></i> Lead Sourcing & Qualification</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="py-16 sm:py-20 bg-white/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="lg:col-span-5">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-pink-200 relative overflow-hidden shadow-xl">
+          <div class="absolute -top-10 -right-10 w-36 h-36 pink-gradient-bg rounded-full opacity-20 blur-2xl pointer-events-none"></div>
+          <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-award"></i></div>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-pink-950 mb-3">Academic Excellence</h3>
+          <p class="text-sm text-pink-900/80 mb-6 leading-relaxed">Graduated with a Bachelor of Science in Marketing Management. Unlike general VAs, I bring deeply structured consumer psychology, branding strategy, and data-driven marketing frameworks to every administrative task.</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-pink-50/80 border border-pink-100"><i class="fa-solid fa-graduation-cap text-pink-600 text-xl flex-shrink-0"></i><div><p class="text-[10px] text-pink-600 font-extrabold uppercase tracking-wider">Degree Attainment</p><p class="text-sm font-bold text-pink-950">B.S. Marketing Management</p></div></div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-pink-50/80 border border-pink-100"><i class="fa-solid fa-bullseye text-pink-600 text-xl flex-shrink-0"></i><div><p class="text-[10px] text-pink-600 font-extrabold uppercase tracking-wider">Specialization</p><p class="text-sm font-bold text-pink-950">Executive Support & Graphic Design</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+        <span class="text-xs font-extrabold text-pink-600 tracking-widest uppercase bg-pink-100 px-3 py-1 rounded-full border border-pink-200 inline-block">About My Strategy</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-pink-950 leading-tight">Bridging Strategic Marketing Knowledge with Seamless Executive VA Operations.</h2>
+        <p class="text-pink-900/80 leading-relaxed text-sm sm:text-base">Hey there! I'm Hikaru, a Virtual Assistant with extensive hands-on experience in Digital Marketing and Social Media Management. My goal is simple: take marketing headaches and tedious admin off your plate so you can focus strictly on growing your business revenue.</p>
+        <p class="text-pink-900/80 leading-relaxed text-sm sm:text-base">Whether you need eye-catching social graphics, help with administrative and executive tasks, or organized backend business workflows, I bring precision, creativity, and a results-first mindset.</p>
+        <div class="pt-3 sm:pt-4">
+          <h4 class="text-xs sm:text-sm font-extrabold text-pink-950 uppercase tracking-wider mb-3">Core Expertise Highlights</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-full bg-pink-100/80 text-pink-900 text-xs font-semibold border border-pink-200 flex items-center gap-1.5"><i class="fa-solid fa-hashtag text-pink-600"></i> Social Media Management</span>
+            <span class="px-3 py-1.5 rounded-full bg-pink-100/80 text-pink-900 text-xs font-semibold border border-pink-200 flex items-center gap-1.5"><i class="fa-solid fa-pen-nib text-pink-600"></i> Graphic Design</span>
+            <span class="px-3 py-1.5 rounded-full bg-pink-100/80 text-pink-900 text-xs font-semibold border border-pink-200 flex items-center gap-1.5"><i class="fa-solid fa-calendar-check text-pink-600"></i> Admin & Executive Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio" class="py-16 sm:py-20 bg-white/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+      <span class="text-xs font-bold text-pink-600 tracking-widest uppercase bg-pink-100 px-3.5 py-1.5 rounded-full border border-pink-200 inline-block"><i class="fa-solid fa-briefcase mr-1.5"></i> Portfolio</span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-pink-950 leading-tight">Featured Work & Results</h2>
+      <p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed">Click on any brand to explore the full gallery of work delivered.</p>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+      <button onclick="filterPortfolio('all')" class="pf-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-pink-600 text-white shadow-md" data-f="all">All Works</button>
+      <button onclick="filterPortfolio('graphics')" class="pf-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-pink-100 hover:bg-pink-200 text-pink-900" data-f="graphics"><i class="fa-solid fa-image mr-1"></i> Social Media Graphics</button>
+      <button onclick="filterPortfolio('reels')" class="pf-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-pink-100 hover:bg-pink-200 text-pink-900" data-f="reels"><i class="fa-solid fa-film mr-1"></i> Reels & Shorts</button>
+      <button onclick="filterPortfolio('admin')" class="pf-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-pink-100 hover:bg-pink-200 text-pink-900" data-f="admin"><i class="fa-solid fa-user-tie mr-1"></i> Admin & Executive</button>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6" id="pf-grid"></div>
+  </div>
+</section>
+
+<!-- ===== GALLERY MODAL ===== -->
+<div id="pf-modal" style="display:none;" class="fixed inset-0 z-50 bg-pink-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5">
+  <div class="bg-white rounded-3xl w-full max-w-5xl max-h-[92vh] overflow-hidden flex flex-col lg:flex-row shadow-2xl relative border border-pink-200">
+    <button onclick="closePfModal()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-pink-100 text-pink-950 hover:bg-pink-600 hover:text-white transition-all flex items-center justify-center shadow-md"><i class="fa-solid fa-xmark text-lg"></i></button>
+    <div class="lg:w-3/5 p-4 sm:p-6 bg-pink-50/50 flex flex-col gap-4 border-b lg:border-b-0 lg:border-r border-pink-200">
+      <div class="relative w-full bg-pink-100 rounded-2xl overflow-hidden flex items-center justify-center border border-pink-200 shadow-inner" style="aspect-ratio:1/1;" id="pf-media-main"></div>
+      <div>
+        <p class="text-[10px] font-bold uppercase tracking-wider text-pink-600 mb-2"><i class="fa-solid fa-images mr-1"></i> <span id="pf-thumb-count">0</span> items — scroll &amp; click to view</p>
+        <div class="flex items-center gap-3 overflow-x-auto pb-2 thumb-scroll" id="pf-thumb-strip"></div>
+      </div>
+    </div>
+    <div class="lg:w-2/5 p-5 sm:p-7 flex flex-col gap-4 overflow-y-auto">
+      <div class="flex items-center gap-3 border-b border-pink-100 pb-4">
+        <img id="pf-modal-logo" src="" alt="" class="w-14 h-14 rounded-xl object-contain border border-pink-200 bg-white p-1.5 shadow-sm flex-shrink-0">
+        <div>
+          <span id="pf-modal-cat" class="text-[10px] font-bold text-pink-700 bg-pink-100 px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-1">Category</span>
+          <h3 id="pf-modal-name" class="text-lg sm:text-xl font-extrabold text-pink-950 leading-tight"></h3>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold text-pink-900 uppercase tracking-wider mb-2">Work Highlights & Scope</h4>
+        <div id="pf-modal-desc" class="text-xs sm:text-sm text-pink-900/80 leading-relaxed bg-pink-50/80 p-4 rounded-2xl border border-pink-100"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOOLS I USE ===== -->
+<section id="tools" class="w-full py-14 bg-pink-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 text-center mb-8 space-y-2">
+    <span class="text-[11px] font-bold text-pink-700 tracking-widest uppercase bg-pink-200/80 px-4 py-1.5 rounded-full inline-block border border-pink-300/50"><i class="fa-solid fa-screwdriver-wrench mr-1.5"></i> Tech Stack & Software</span>
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-pink-950">Tools I Use</h2>
+  </div>
+  <div class="relative w-full overflow-hidden marquee-container py-4">
+    <div class="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-pink-50 to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-pink-50 to-transparent z-10 pointer-events-none"></div>
+    <div class="animate-marquee flex items-center gap-10 sm:gap-14">
+      <div class="flex items-center gap-10 sm:gap-14 shrink-0">
+        <img src="https://framerusercontent.com/images/RCM0AGYKrcbkzgJYAlu0F3bUfM.png?width=1107&height=92" alt="Tools" class="h-12 sm:h-16 md:h-20 w-auto object-contain">
+        <img src="https://framerusercontent.com/images/VgyPnNvN9zYKNZQEycvv2PuNE.png?width=1103&height=91" alt="Tools" class="h-12 sm:h-16 md:h-20 w-auto object-contain">
+      </div>
+      <div class="flex items-center gap-10 sm:gap-14 shrink-0">
+        <img src="https://framerusercontent.com/images/RCM0AGYKrcbkzgJYAlu0F3bUfM.png?width=1107&height=92" alt="Tools" class="h-12 sm:h-16 md:h-20 w-auto object-contain">
+        <img src="https://framerusercontent.com/images/VgyPnNvN9zYKNZQEycvv2PuNE.png?width=1103&height=91" alt="Tools" class="h-12 sm:h-16 md:h-20 w-auto object-contain">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="py-16 sm:py-20 bg-white/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <h2 class="text-xs font-extrabold text-pink-600 uppercase tracking-widest mb-2">Work Experience</h2>
+      <h3 class="text-2xl sm:text-4xl font-extrabold text-pink-950 tracking-tight">Track Record & Qualifications</h3>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div class="glass-card rounded-2xl p-6 sm:p-7 bg-white/80 border border-pink-200 relative pl-7 sm:pl-9"><span class="absolute left-0 top-0 bottom-0 w-2 pink-gradient-bg rounded-l-2xl"></span><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2"><h4 class="font-extrabold text-base sm:text-lg text-pink-950">Freelance Real Estate Support Specialist</h4><span class="text-xs font-bold text-pink-600 bg-pink-100 px-3 py-1 rounded-full w-fit">July 2026 – Present</span></div><p class="text-xs sm:text-sm font-bold text-pink-800 mb-3">SOOLOK Properties</p><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed">Provided administrative, sales, marketing, and operational support, including client coordination, lead generation, CRM management, property inquiries, scheduling, and follow-ups.</p></div>
+      <div class="glass-card rounded-2xl p-6 sm:p-7 bg-white/80 border border-pink-200 relative pl-7 sm:pl-9"><span class="absolute left-0 top-0 bottom-0 w-2 bg-pink-400 rounded-l-2xl"></span><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2"><h4 class="font-extrabold text-base sm:text-lg text-pink-950">Sales & Marketing Officer</h4><span class="text-xs font-bold text-pink-600 bg-pink-100 px-3 py-1 rounded-full w-fit">September 2025 – September 2026</span></div><p class="text-xs sm:text-sm font-bold text-pink-800 mb-3">FAXYN Philippines</p><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed">Managed social media content, email marketing, influencer campaigns, market research, and digital marketing initiatives to strengthen brand presence, engagement, and customer acquisition.</p></div>
+      <div class="glass-card rounded-2xl p-6 sm:p-7 bg-white/80 border border-pink-200 relative pl-7 sm:pl-9"><span class="absolute left-0 top-0 bottom-0 w-2 bg-pink-300 rounded-l-2xl"></span><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2"><h4 class="font-extrabold text-base sm:text-lg text-pink-950">Marketing Intern</h4><span class="text-xs font-bold text-pink-600 bg-pink-100 px-3 py-1 rounded-full w-fit">January – May 2025</span></div><p class="text-xs sm:text-sm font-bold text-pink-800 mb-3">Goldnines International Co., Ltd. (MICHAELA)</p><p class="text-xs sm:text-sm text-pink-900/80 leading-relaxed">Supported social media management, content planning, marketing campaigns, customer inquiries, and email marketing while maintaining consistent brand communication.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10 sm:mb-12">
+        <h2 class="text-xs font-extrabold text-pink-600 uppercase tracking-widest mb-2">Get In Touch</h2>
+        <h3 class="text-2xl sm:text-4xl font-extrabold text-pink-950 tracking-tight">Let's Discuss Your Project</h3>
+        <p class="text-sm sm:text-base text-pink-900/80 mt-3 leading-relaxed">Ready to streamline your marketing or operations? Schedule a discovery call directly below.</p>
+      </div>
+      <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-xl border border-pink-200">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div class="space-y-7">
+            <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center text-pink-600 flex-shrink-0 shadow-sm"><i class="fa-regular fa-envelope text-xl"></i></div><div><p class="text-[10px] font-extrabold text-pink-600 uppercase tracking-widest mb-1">Direct Email</p><a href="mailto:hikarusolis@gmail.com" class="text-sm sm:text-base font-bold text-pink-950 hover:text-pink-600 transition-colors">hikarusolis@gmail.com</a></div></div>
+            <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center text-pink-600 flex-shrink-0 shadow-sm"><i class="fa-solid fa-clock text-xl"></i></div><div><p class="text-[10px] font-extrabold text-pink-600 uppercase tracking-widest mb-1">Turnaround Time</p><p class="text-sm sm:text-base font-bold text-pink-950">Replies within 24 hours</p></div></div>
+            <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center text-pink-600 flex-shrink-0 shadow-sm"><i class="fa-solid fa-globe text-xl"></i></div><div><p class="text-[10px] font-extrabold text-pink-600 uppercase tracking-widest mb-1">Availability</p><p class="text-sm sm:text-base font-bold text-pink-950">Global Client Support</p><p class="text-xs text-pink-700 font-semibold mt-0.5">EST · PST · GMT</p></div></div>
+          </div>
+          <div class="flex flex-col items-center text-center gap-5 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 border border-pink-200">
+            <div class="w-20 h-20 rounded-full pink-gradient-bg flex items-center justify-center shadow-lg"><i class="fa-solid fa-calendar-check text-white text-3xl"></i></div>
+            <div><h4 class="font-extrabold text-xl text-pink-950 mb-2">Book a Discovery Call</h4><p class="text-xs text-pink-900/70 leading-relaxed max-w-xs mx-auto">Let's talk about your business needs — no commitment required.</p></div>
+            <!-- ✏️ Replace YOUR_CALENDLY_LINK_HERE with your actual Calendly URL -->
+            <a href="YOUR_CALENDLY_LINK_HERE" target="_blank" class="w-full px-6 py-4 rounded-xl pink-gradient-bg text-white font-extrabold text-sm shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-3">
+              <i class="fa-solid fa-phone text-white"></i> Schedule Free Discovery Call
+            </a>
+            <p class="text-[10px] text-pink-500 font-medium">100% Free · No Commitment Required</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-pink-950 text-pink-100 py-12 border-t border-pink-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-pink-900 text-center md:text-left">
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-pink-600 flex items-center justify-center text-white font-bold text-xl shrink-0">S</div>
+        <div><span class="font-extrabold text-base sm:text-lg text-white block">Hikaru Solis, BS Major in Marketing Management</span><span class="text-xs text-pink-300">Virtual Assistant & Digital Marketing Specialist</span></div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium">
+        <a href="#about" class="hover:text-pink-400 transition-colors">About</a>
+        <a href="#services" class="hover:text-pink-400 transition-colors">Services</a>
+        <a href="#portfolio" class="hover:text-pink-400 transition-colors">Portfolio</a>
+        <a href="#experience" class="hover:text-pink-400 transition-colors">Experience</a>
+        <a href="#contact" class="hover:text-pink-400 transition-colors">Contact</a>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-pink-400 gap-4 text-center sm:text-left">
+      <p>&copy; 2026 Hikaru Solis. All rights reserved.</p>
+      <a href="mailto:hikarusolis@gmail.com" class="hover:text-pink-300 transition-colors flex items-center gap-1.5"><i class="fa-regular fa-envelope"></i> hikarusolis@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== ALL JAVASCRIPT ===== -->
+<script>
+// ── MOBILE NAV ──────────────────────────────────────────────────
+var mBtn = document.getElementById('mobile-menu-btn');
+var mMenu = document.getElementById('mobile-menu');
+var mIcon = document.getElementById('menu-icon');
+mBtn.addEventListener('click', function(){
+  mMenu.classList.toggle('hidden');
+  mIcon.className = mMenu.classList.contains('hidden') ? 'fa-solid fa-bars text-2xl' : 'fa-solid fa-xmark text-2xl';
+});
+document.querySelectorAll('.mobile-nav').forEach(function(link){
+  link.addEventListener('click', function(e){
+    var href = this.getAttribute('href');
+    if(href && href.startsWith('#')){
+      e.preventDefault();
+      mMenu.classList.add('hidden');
+      mIcon.className = 'fa-solid fa-bars text-2xl';
+      var target = document.querySelector(href);
+      if(target) setTimeout(function(){ target.scrollIntoView({behavior:'smooth',block:'start'}); }, 150);
+    }
+  });
+});
+
+// ── DRIVE HELPERS ────────────────────────────────────────────────
+function driveId(url){ var m=url.match(/\/d\/([a-zA-Z0-9_-]+)/); return m?m[1]:null; }
+function driveImg(url){ var id=driveId(url); return id?'https://lh3.googleusercontent.com/d/'+id:url; }
+function driveVid(url){ var id=driveId(url); return id?'https://drive.google.com/file/d/'+id+'/preview':url; }
+
+// ── PORTFOLIO DATA ───────────────────────────────────────────────
+var PF = [
+  {
+    id:'propaq-graphics', cat:'graphics', catLabel:'Social Media Graphics',
+    name:'Propaq Solutions',
+    logo: driveImg('https://drive.google.com/file/d/1FKvVQqGg_B1b63DRxmFq6VRLnmbrR0ce/view?usp=drive_link'),
+    coverIdx:2,
+    short:'Branded social media graphics and promotional content for day-to-day marketing campaigns.',
+    desc:'<p class="font-bold text-pink-950 mb-1">Social Media Graphics</p><ul class="list-disc list-inside space-y-1 text-pink-900/80"><li>Created branded social media graphics for the startup\'s day-to-day marketing campaigns.</li><li>Translated product messaging into clear, visually consistent social content.</li><li>Adapted layouts and creative direction while maintaining a cohesive brand look.</li></ul>',
+    media:[
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1IndNdpgcYjZ3mXlL2zO_lKT30-uXi5hZ/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1ilbdeerXQabFkI89PSjk5OSjwxFkL9xw/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1m9lH8BeZCpEh1QBBzLFjavaCpRGH_6Vb/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1qRlaTuGl42jHviWYrTVijUsoUQPBy4_Q/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/18Riu8DOlwwIoLP55Yd6w27uuJ5k3vyVh/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/18tD4uUAfSZz24tkejUQDmNEuK0hsOkn-/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1tP9fzLY1jHbfqspdeAjpGR5MHhkZ1AAl/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1Mx-eJx1EUOsR2QwMcXDD7p8jN8xNj1ry/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1XcRiw_tl0uUbsXHPlhC8YECyl4wi8Ulz/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/16V6p_LhDHMp-tn5eHeCuC8q4qv5NZeKx/view?usp=drivesdk')}
+    ]
+  },
+  {
+    id:'propaq-reels', cat:'reels', catLabel:'Reels & Shorts',
+    name:'Propaq Solutions',
+    logo:'https://framerusercontent.com/images/XcvohtQJlHxZYMqMjZsc1DQbwM.png?width=284&height=265',
+    coverIdx:0,
+    short:'Trend-aware short-form videos and edits created for fast-paced social feeds.',
+    desc:'<p class="font-bold text-pink-950 mb-1">Reels & Shorts</p><ul class="list-disc list-inside space-y-1 text-pink-900/80"><li>Produced and edited short-form videos using product visuals, text overlays, transitions, and engaging pacing.</li><li>Created concise, trend-aware video content adapted for fast-paced social media feeds.</li></ul>',
+    media:[
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1LbM1ldwXqJQw0rJWpNDwE6d1y_xIHaB4/view?usp=drive_link')},
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1xtIjsUZBSP9LE02KayfuCm0n4lL8Eem7/view?usp=drive_link')},
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1A4XS4BPovdkhuFas4GnOWb3M5SaV9E2q/view?usp=drive_link')},
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1MDLZSEuO1CvteO-1mOqtiKR1yAEjSPOA/view?usp=drive_link')},
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1ybmfsSTC6fMOnM-oBl6Rn_vuiLFgfViU/view?usp=drive_link')}
+    ]
+  },
+  {
+    id:'xyn-lifestyle', cat:'graphics', catLabel:'Social Media Graphics',
+    name:'XYN Smart Lifestyle',
+    logo:'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=150&auto=format&fit=crop&q=80',
+    coverIdx:1,
+    short:'Gallery-style social media creatives and static promotional layouts.',
+    desc:'<p class="font-bold text-pink-950 mb-1">Social Media Graphics</p><ul class="list-disc list-inside space-y-1 text-pink-900/80"><li>Designed gallery-style social media creatives for lifestyle-focused marketing campaigns.</li><li>Developed visual concepts aligned with the brand\'s modern lifestyle aesthetic.</li><li>Adapted creative layouts for different promotional themes while maintaining visual consistency.</li></ul>',
+    media:[
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1_VUZmSWsKX_u8I6-odR-DBu3UnuOol8B/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1phBSZp07fxiqApE2as5a-51fhpR8G44A/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1PlZPWO22Fvdtbd4VUxpb1H5sYNZPyWIl/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/11sSshSq42gipx00yQ5POMiVvtAfjxld1/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/19pQbgaBQ2InRBE8fOqaAfUGJP1tHSPuA/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1nNMSkq_KKo3tRM7CPMxT2-Lb9kt-pq55/view?usp=drivesdk')}
+    ]
+  },
+  {
+    id:'ozemtech', cat:'graphics', catLabel:'Social Media Graphics',
+    name:'OZEMTECH',
+    logo:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=150&auto=format&fit=crop&q=80',
+    coverIdx:2,
+    short:'Promotional, educational, and community-focused social media graphics.',
+    desc:'<p class="font-bold text-pink-950 mb-1">Social Media Graphics</p><ul class="list-disc list-inside space-y-1 text-pink-900/80"><li>Planned and designed social media graphics around promotional, educational, and community-focused content.</li><li>Translated marketing ideas into visually engaging posts while maintaining brand consistency.</li><li>Created content variations suited to different social media topics and audience interests.</li></ul>',
+    media:[
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1AVAW8RzWIB3hwKsj66MNOGVsMk8i2C1B/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1zmqXQ8JZki1xd1f9llhfDBLf9Xaex_oL/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1n9u33sHyaUuFxyfyj0bpdizDDl2J3YzQ/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1s0Y2rZapZkMnWacGMl8TJul9nvoMYRzm/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1Zr-bs_Bj_DAqVqW8nWGG3hfDQAi5wEyl/view?usp=drivesdk')}
+    ]
+  },
+  {
+    id:'chef-p-graphics', cat:'graphics', catLabel:'Social Media Graphics',
+    name:'Chef P',
+    logo:'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=150&auto=format&fit=crop&q=80',
+    coverIdx:0,
+    short:'Promotional graphics and social media content showcasing food products and offers.',
+    desc:'<p class="font-bold text-pink-950 mb-1">Social Media Graphics</p><ul class="list-disc list-inside space-y-1 text-pink-900/80"><li>Created promotional graphics to showcase food products, offers, and brand messaging.</li><li>Used food photography, typography, and promotional elements to make products visually appealing.</li><li>Developed creative variations for different products, campaigns, and promotional themes.</li></ul>',
+    media:[
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1mcUmZeg3o_PbrKkYvTJjOMxJ6l9FCz6y/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1eribKL6D0SdgpLrCY0B01pBtm-6yFUo9/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1K9BSYHzD6iZdV1GP7VEZ2nQQmU9Jm-i2/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1OFa50HILdOCDtVjmUAO05cuO4W2Wjufa/view?usp=drivesdk')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1atpMRlCU1OkEjHDlSjEI-MQDNhKCTwRQ/view?usp=drivesdk')}
+    ]
+  },
+  {
+    id:'chef-p-reels', cat:'reels', catLabel:'Reels & Shorts',
+    name:'Chef P',
+    logo:'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=150&auto=format&fit=crop&q=80',
+    coverIdx:3,
+    short:'Short-form food videos, TikTok content, and influencer collaborations.',
+    desc:'<p class="font-bold text-pink-950 mb-1">Reels & Shorts</p><ul class="list-disc list-inside space-y-1 mb-3 text-pink-900/80"><li>Edited short-form food videos for TikTok and social media platforms.</li><li>Combined product footage, text overlays, transitions, and music for engaging content.</li></ul><p class="font-bold text-pink-950 mb-1">Influencer Collaborations</p><ul class="list-disc list-inside space-y-1 text-pink-900/80"><li>Supported influencer collaborations to extend brand content reach across creator audiences.</li></ul>',
+    media:[
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1woFXp0EN9_b_feyTelaNiwHg9Cfd-i0r/view?usp=drive_link')},
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1-lI1WpGKP_4C1u4EqEtkOSomeXd0Uc-5/view?usp=drive_link')},
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1CI4vb89WGVKGcpfmwC3i65xLzzfZha7W/view?usp=drive_link')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1wkuf0QvzPSeqfFZyA-tv9Tbcx280Bg4I/view?usp=drive_link')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1JVnmcDE_Qy8_uhGOGaYczOXmlqOnFL3R/view?usp=drive_link')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1LQIe_Cy1porqb5W_Qk7dtiFsg8sFTh1w/view?usp=drive_link')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1-UscfLfMdUClQjJd7tLlxNeikbAw6yJz/view?usp=drive_link')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1EuYTR4vxbefQySL3CJ9LlONkHd_r0Zoa/view?usp=drive_link')},
+      {t:'image',url:driveImg('https://drive.google.com/file/d/1aEx_GerK1VyPpmlkxumlItuDcllvHuiQ/view?usp=drive_link')}
+    ]
+  },
+  {
+    id:'goldiness', cat:'reels', catLabel:'Reels & Shorts',
+    name:'Goldiness International Co.',
+    logo:'https://framerusercontent.com/images/gP3RbXaR0X9EEVSGRtMUfsW5iQ.png?width=7302&height=1381',
+    coverIdx:0,
+    short:'Short-form fashion content creation and campaign support for MICHAELA.',
+    desc:'<p class="text-pink-900/80 mb-2">During my internship at MICHAELA, I supported the brand\'s digital marketing efforts through short-form content creation and campaign support.</p><p class="font-bold text-pink-950 mb-1">Reels & Shorts</p><ul class="list-disc list-inside space-y-1 text-pink-900/80"><li>Created and edited short-form fashion content featuring the brand\'s products.</li><li>Turned product footage and creative concepts into polished videos for social media.</li><li>Supported marketing campaigns through visual content designed to present products engagingly.</li></ul>',
+    media:[
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1B4cCS5MyxJ5zrQi_BN4flwBQbe4-zL40/view?usp=drivesdk')},
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1O2Gko_jgSBf6hAt-EHrCBod8pOcA-LNf/view?usp=drivesdk')},
+      {t:'video',url:driveVid('https://drive.google.com/file/d/1VBn72KjWYo8QV9iuaPpS5uc0TUi42aDB/view?usp=drivesdk')}
+    ]
+  },
+  {
+    id:'admin-exec', cat:'admin', catLabel:'Admin & Executive',
+    name:'Executive & Administrative Support',
+    logo:'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=150&auto=format&fit=crop&q=80',
+    coverIdx:0,
+    short:'Operations management, scheduling, content calendar, & client coordination.',
+    desc:'<p class="font-bold text-pink-950 mb-1">Executive Administrative Management</p><ul class="list-disc list-inside space-y-1 text-pink-900/80"><li>Managed executive scheduling, content calendar organization, and cross-functional team communications.</li><li>Handled project tracking, client outreach logs, email funnel automation, and operational workflows.</li><li>Maintained standard operating procedures (SOPs) and organized marketing assets for smooth operations.</li></ul>',
+    media:[
+      {t:'image',url:'https://framerusercontent.com/images/wDf3wxbYTawWfJKBwMmuvoH3QgQ.png?width=1427&height=1080'},
+      {t:'image',url:'https://framerusercontent.com/images/zAAjn4zQ9KX4vKHTrHYZjkmE.png?width=1236&height=1065'},
+      {t:'image',url:'https://framerusercontent.com/images/Fap4UUDtxcXCzFjDB5qUhs3cRHw.png?width=1823&height=1080'}
+    ]
+  }
+];
+
+// ── RENDER CARDS ─────────────────────────────────────────────────
+function renderPF(filter){
+  var grid = document.getElementById('pf-grid');
+  grid.innerHTML = '';
+  var list = filter === 'all' ? PF : PF.filter(function(x){ return x.cat === filter; });
+  if(!list.length){ grid.innerHTML = '<div class="col-span-full text-center py-16 text-pink-400 text-sm font-medium">No works in this category yet.</div>'; return; }
+  list.forEach(function(item){
+    var cm = item.media[item.coverIdx] || item.media[0];
+    var src = (cm.t === 'image') ? cm.url : item.logo;
+    var isVid = cm.t === 'video';
+    var card = document.createElement('div');
+    card.className = 'glass-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group flex flex-col bg-white border border-pink-200';
+    card.style.aspectRatio = '1/1';
+    card.onclick = function(){ openPfModal(item.id); };
+    card.innerHTML =
+      '<div class="relative overflow-hidden bg-pink-100 flex-shrink-0" style="height:62%">' +
+        '<img src="'+src+'" alt="'+item.name+'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=\''+item.logo+'\'">' +
+        (isVid ? '<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><div class="w-12 h-12 rounded-full bg-black/30 backdrop-blur-sm border-2 border-white/60 flex items-center justify-center"><i class="fa-solid fa-play text-white text-base ml-0.5"></i></div></div>' : '') +
+        '<div class="absolute inset-0 bg-gradient-to-t from-pink-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">' +
+          '<span class="text-white text-[11px] font-bold bg-pink-600 px-2.5 py-1 rounded-full"><i class="fa-solid fa-expand mr-1"></i>Open Gallery ('+item.media.length+')</span>' +
+        '</div>' +
+        '<span class="absolute top-2.5 left-2.5 text-[10px] font-bold text-pink-900 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded-full border border-pink-200 shadow-sm">'+item.catLabel+'</span>' +
+      '</div>' +
+      '<div class="flex flex-col flex-1 justify-between p-4 min-h-0">' +
+        '<div class="min-h-0">' +
+          '<h3 class="font-extrabold text-sm text-pink-950 mb-1 line-clamp-1">'+item.name+'</h3>' +
+          '<p class="text-xs text-pink-900/75 leading-relaxed line-clamp-2">'+item.short+'</p>' +
+        '</div>' +
+        '<div class="pt-2 mt-2 border-t border-pink-100 flex items-center justify-between text-xs font-bold text-pink-700 flex-shrink-0">' +
+          '<span><i class="fa-solid fa-images mr-1"></i>'+item.media.length+' Items</span>' +
+          '<span class="text-pink-600 flex items-center gap-1">View Work <i class="fa-solid fa-arrow-right text-[10px]"></i></span>' +
+        '</div>' +
+      '</div>';
+    grid.appendChild(card);
+  });
+}
+
+// ── FILTER ───────────────────────────────────────────────────────
+function filterPortfolio(cat){
+  document.querySelectorAll('.pf-btn').forEach(function(b){
+    b.className = b.getAttribute('data-f') === cat
+      ? 'pf-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-pink-600 text-white shadow-md'
+      : 'pf-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-pink-100 hover:bg-pink-200 text-pink-900';
+  });
+  renderPF(cat);
+}
+
+// ── MODAL ────────────────────────────────────────────────────────
+var curMedia = [];
+function openPfModal(id){
+  var item = null;
+  for(var i=0;i<PF.length;i++){ if(PF[i].id===id){ item=PF[i]; break; } }
+  if(!item) return;
+  document.getElementById('pf-modal-logo').src   = item.logo;
+  document.getElementById('pf-modal-name').innerText = item.name;
+  document.getElementById('pf-modal-cat').innerText  = item.catLabel;
+  document.getElementById('pf-modal-desc').innerHTML = item.desc;
+  document.getElementById('pf-thumb-count').innerText = item.media.length;
+  curMedia = item.media;
+  var strip = document.getElementById('pf-thumb-strip');
+  strip.innerHTML = '';
+  item.media.forEach(function(m, idx){
+    var th = document.createElement('div');
+    th.className = 'w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex-shrink-0 border-2 cursor-pointer transition-all ' + (idx===0 ? 'border-pink-600 opacity-100' : 'border-transparent opacity-60 hover:opacity-100');
+    if(m.t === 'video'){
+      th.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-pink-500 to-rose-600 flex flex-col items-center justify-center gap-1"><i class="fa-solid fa-circle-play text-white text-xl"></i><span class="text-[8px] font-bold text-white/80">VIDEO</span></div>';
+    } else {
+      th.innerHTML = '<img src="'+m.url+'" class="w-full h-full object-cover">';
+    }
+    th.addEventListener('click',(function(i){ return function(){ selectMedia(i); }; })(idx));
+    strip.appendChild(th);
+  });
+  selectMedia(0);
+  document.getElementById('pf-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function selectMedia(idx){
+  var main = document.getElementById('pf-media-main');
+  var m = curMedia[idx];
+  if(!m) return;
+  main.innerHTML = m.t === 'video'
+    ? '<iframe src="'+m.url+'" class="w-full h-full border-0 rounded-2xl" allow="autoplay;encrypted-media" allowfullscreen></iframe>'
+    : '<img src="'+m.url+'" class="w-full h-full object-contain rounded-2xl">';
+  var thumbs = document.getElementById('pf-thumb-strip').children;
+  for(var i=0;i<thumbs.length;i++){
+    thumbs[i].className = thumbs[i].className.replace('border-pink-600','border-transparent').replace('opacity-100','opacity-60');
+    if(i===idx){ thumbs[i].className = thumbs[i].className.replace('border-transparent','border-pink-600').replace('opacity-60','opacity-100'); }
+  }
+  if(thumbs[idx]) thumbs[idx].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+
+function closePfModal(){
+  document.getElementById('pf-modal').style.display = 'none';
+  document.getElementById('pf-media-main').innerHTML = '';
+  document.body.style.overflow = '';
+}
+
+document.getElementById('pf-modal').addEventListener('click', function(e){ if(e.target===this) closePfModal(); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closePfModal(); });
+
+// ── INIT ─────────────────────────────────────────────────────────
+renderPF('all');
+</script>
+</body>
+</html>
